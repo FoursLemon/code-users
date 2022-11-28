@@ -12,7 +12,7 @@ Vue.use(ElementUI);
 
 import axios from 'axios'
 // 配置axios
-axios.defaults.baseURL = "http://localhost:3000"
+axios.defaults.baseURL = "http://localhost:5000"
 Vue.prototype.$http = axios
 axios.interceptors.request.use((config)=>{
   loadingInstance = Loading.service({fullscreen:true})

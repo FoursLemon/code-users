@@ -1,16 +1,9 @@
 <template>
   <div>
     <!-- 添加用户 -->
-    <el-button type="primary" @click="dialogVisible = true"
-      >添加新用户</el-button
-    >
+    <el-button type="primary" @click="dialogVisible = true">添加新用户</el-button>
 
-    <el-dialog
-      title="添加新用户"
-      :visible.sync="dialogVisible"
-      width="30%"
-      @close="onClose"
-    >
+    <el-dialog title="添加新用户" :visible.sync="dialogVisible" width="30%" @close="onClose">
       <!-- 添加用户表单 -->
       <el-form :model="form" :rules="formRules" ref="myAddForm">
         <el-form-item label="用户姓名" label-width="80px" prop="name">
@@ -60,6 +53,8 @@
     </el-row>
   </div>
 </template>
+
+
 
 <script>
 export default {
@@ -153,11 +148,14 @@ export default {
       this.getUserList();
     },
   },
-
-  // vue实例创建时调用获取用户函数
   created() {
     this.getUserList();
   },
+  // setup() {
+
+  //   return {
+  //   };
+  // },
 };
 </script>
 
